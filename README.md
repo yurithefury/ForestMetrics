@@ -1,6 +1,6 @@
 Description
 ===========
-Individual tree segmentation in LiDAR-derived point clouds implemented using [The Point Cloud Library (PCL)](http://pointclouds.org/) described in:
+Individual tree segmentation in LiDAR-derived point clouds implemented using [The Point Cloud Library (PCL)](http://pointclouds.org/) and described in:
 [Shendryk, I., M. Broich, M. G. Tulbure and S. V. Alexandrov (2016). "Bottom-up delineation of individual trees from full-waveform airborne laser scans in a structurally complex eucalypt forest." Remote Sensing of Environment 173: 69-83.](https://www.sciencedirect.com/science/article/pii/S0034425715301966)
 
 and applied in:
@@ -68,7 +68,7 @@ Usage
 
 Navigate to the 'data/' folder and run
 
-    ../bin/gui_delineation forest.pcd
+    ../bin/gui_delineation subset1.pcd
 
 The program will load given file and proceed by building a graph of the input
 point cloud. It will then display the graph (as a voxelized point cloud) so
