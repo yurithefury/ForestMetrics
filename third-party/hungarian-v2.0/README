@@ -1,0 +1,80 @@
+#
+# PLEASE READ THIS FILE FIRST.
+#
+# This is the implementation of Kuhn-Munkres Hungarian algorithm written in C++
+# and utilizes STL as main data structures. The algorithm assumes the input a 
+# MAXIMIZATION problem and finds the maximal ouputs (including the optimality 
+# and the matching pairs) through manipulating the bipartite graph.
+# 
+# NOTE that, the time complexity of this implementation could be more than 
+# O(N^3) but should be less than O(N^4), due to simple data structure used. 
+# Time can still be improved.
+#
+# You can freely use this code, and we are grateful if you can cite our work:
+# Lantao Liu, Dylan Shell. "Assessing Optimal Assignment under Uncertainty: An Interval-based Algorithm". International Journal of Robotics Research (IJRR). vol. 30, no. 7, pp 936-953. Jun 2011.
+# Or other related work posted on my page: http://students.cse.tamu.edu/lantao/
+#
+# Lantao Liu, <lantao@cse.tamu.edu>
+# Dept. of Computer Science and Engineering, 
+# Texas A&M University, TX, 77843-3112.
+# Nov 9, 2009.
+# Last updated on 9/27/2011
+#
+
+
+# -----------------------------------------------
+
+# The code has been tested in Ubuntu 9.04+ and Mac OS 10.5., with gcc4.3.3.
+# If you are running Linux and you want to see the plot, your can apt-get GNUplot (a little bit flickery due to no double buffering).
+
+To compile, just type 'make'
+To clean, just type 'make clean'
+
+Command Line:
+Type "./hungarian -h" to prompt below usage options.
+
+	./hungarian
+		-i <file>       #specify <file> which assignment will be 
+				#imported from. <file> contains a matrix.
+				#see "example.demo" inside folder.
+				#Default: randomly generating assingment
+		-s <size_t>     #use random generator instead of input file,
+				#<size_t> should specify seed for generator,
+				#this helps analyze one specific assignment
+				#Default: time(Null)
+		-n <size_t>	#if use random generator, tell me the size
+				#Default: 3x3 
+		-p <bool>	#specifiy "1" if you want to see plot,
+				#Default: 0,  no plot by default
+		-t <size_t>	#if plot, and you want to see slide show,
+				#then specify the interval period by second.
+				#Default: 0, that is, need manually operated.
+		-v <size_t>	#specify the verbose level, only allow 0,1,2
+				#0: nothing will print onto screen but result
+				#1: only print important steps information
+				#2: print all information including sets result
+				#Default: 1
+
+				#The random generater by default can genenerate
+				#natrual number from 0 to 100. You can grep and
+				#change macro MAX_RANDOM for other values
+				
+
+For instance:
+	./hungarian
+		run Hungarian with a 3x3 random assignment everytime.
+	./hungarian -i example
+		run Hungarian on this example assignment
+	./hungarian -s 10 
+		run Hungrian with random seed 10, on a default 3x3 assignment
+	./hungarian -s 10 -n 5
+		run Hungarian with random seed 10, on a 5x5 assignment
+
+	./hungarian -p 1
+		run Hungarian with gnuplot
+	./hungarian -p 1 -t 2
+		run Hungarian with gnuplot, result is slide show (period = 2)
+	./hungarian -v 0
+		run Hungarian, nothing will be printed on screen except result
+	
+

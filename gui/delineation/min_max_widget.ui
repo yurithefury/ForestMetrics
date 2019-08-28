@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MinMaxWidget</class>
+ <widget class="QWidget" name="MinMaxWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <property name="fieldGrowthPolicy">
+    <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+   </property>
+   <item row="0" column="0">
+    <widget class="QDoubleSpinBox" name="spinbox_min"/>
+   </item>
+   <item row="0" column="1">
+    <widget class="QSlider" name="slider_min">
+     <property name="minimum">
+      <number>-2147483647</number>
+     </property>
+     <property name="maximum">
+      <number>2147483647</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QDoubleSpinBox" name="spinbox_max">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QSlider" name="slider_max">
+     <property name="minimum">
+      <number>-2147483647</number>
+     </property>
+     <property name="maximum">
+      <number>2147483647</number>
+     </property>
+     <property name="value">
+      <number>99</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>slider_min</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MinMaxWidget</receiver>
+   <slot>onSliderMinValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>236</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinbox_min</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>MinMaxWidget</receiver>
+   <slot>onSpinboxMinValueChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>42</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slider_max</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MinMaxWidget</receiver>
+   <slot>onSliderMaxValueChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>236</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinbox_max</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>MinMaxWidget</receiver>
+   <slot>onSpinboxMaxValueChanged(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>42</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onSliderMinValueChanged(int)</slot>
+  <slot>onSpinboxMinValueChanged(double)</slot>
+  <slot>onSliderMaxValueChanged(int)</slot>
+  <slot>onSpinboxMaxValueChanged(double)</slot>
+ </slots>
+</ui>

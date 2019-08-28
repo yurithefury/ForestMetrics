@@ -1,0 +1,14 @@
+
+# fixed the gnuplot "buffer overflow" problem.
+# 4/28/2012
+
+# v2.0
+# removed the MTL dependency, mtl::matrix->2d vectors
+# 9/27/2011
+
+# modified the data type, allowing double type assignment
+# 3/5/2010
+
+# Pure original Hungarian algorithm.
+# 11/1/2009
+

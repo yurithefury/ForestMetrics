@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="595f3e6c-bb41-44ef-b6a1-f79738817245" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/ForestMetrics.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Doxyfile.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake/Modules/UseDoxygen.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/forest.pcd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/test1.pcd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/test13.pcd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/test47.pcd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/test56.pcd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/test60.pcd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/viewpoint.cam" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/cluster_list_model.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/cluster_list_model.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/config.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/config.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/delineation.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/graph_building_form.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/graph_building_form.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/graph_building_form.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/main_window.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/main_window.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/main_window.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/min_max_widget.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/min_max_widget.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/min_max_widget.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/pipeline.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/preprocessing_form.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/preprocessing_form.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/preprocessing_form.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/seed_selection.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/seed_selection.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/seed_selection_form.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/seed_selection_form.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/seed_selection_form.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/segmentation_form.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/segmentation_form.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/segmentation_form.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/status_bar.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/trunk_detection_form.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/trunk_detection_form.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/trunk_detection_form.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/delineation/types.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/rws/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/rws/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/rws/main_window.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/rws/main_window.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/rws/main_window.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/rws/rws.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/rws/rws.pro.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/rws/seed_selection.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui/rws/seed_selection.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/as_range.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/conversions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/factory/edge_weight_computer_factory.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/factory/factory.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/factory/graph_builder_factory.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/factory/graph_factory.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/common.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/edge_weight_computer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/edge_weight_computer_terms.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/graph_builder.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/impl/common.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/impl/edge_weight_computer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/impl/nearest_neighbors_graph_builder.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/impl/voxel_grid_graph_builder.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/nearest_neighbors_graph_builder.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/point_cloud_graph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/point_cloud_graph_concept.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/utils.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph/voxel_grid_graph_builder.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/graph_visualizer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/hungarian/hungarian.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/impl/io.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/impl/octree_pointcloud_adjacency3.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/impl/octree_pointcloud_adjacency_container2.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/impl/random_walker.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/impl/random_walker_segmentation.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/io.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/kde.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/label_utils.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/measure_runtime.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/mesh_grid.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/random_walker.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/random_walker_segmentation.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/scaler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/seed_utils.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/tree_top_detector.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/typedefs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/create_seeds.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hungarian/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hungarian/hungarian.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/io.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kde.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mesh_grid.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/random_walker_segmentation.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/random_walker_segmentation_app.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/segmentation_evaluation.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/slice.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree_top_detector.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view_point_cloud_graph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/Assignment.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/Assignment.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/BipartiteGraph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/BipartiteGraph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/CmdParser.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/Hungarian.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/Hungarian.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/Log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/Matrix.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/PlotGraph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/PlotGraph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/example.demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/plot/Cgnuplot.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/plot/Cgnuplot.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/plot/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/plot/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/plot/graph_hungarian.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/hungarian-v2.0/plot/graph_hungarian.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/third-party/tviewer/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/ForestMetrics.iml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="250" />
+    <option name="y" value="72" />
+    <option name="width" value="1163" />
+    <option name="height" value="763" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ForestMetrics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ForestMetrics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ForestMetrics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ForestMetrics" type="462c0819:PsiDirectoryNode" />
+              <item name="third-party" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ForestMetrics" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ForestMetrics" type="462c0819:PsiDirectoryNode" />
+              <item name="third-party" type="462c0819:PsiDirectoryNode" />
+              <item name="tviewer" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="595f3e6c-bb41-44ef-b6a1-f79738817245" name="Default Changelist" comment="" />
+      <created>1566966046610</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566966046610</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="2066" height="1125" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13030602" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2684">
+            <caret line="122" selection-start-line="122" selection-end-line="122" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/third-party/tviewer/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

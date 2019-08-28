@@ -1,0 +1,13 @@
+#Lines after '#' is commented
+#This is an example file showing rules of specifying an assignment
+#The utility should be as below:
+  8 10 -4.5    # allow float and negative
+abc  12   6    # non-num "abc" is converted to 0
+     # if you comment line below, it still works (a 2x3 matrix)
+ 18    -3  5.138
+
+#The matrix could be square matrix, i.e.,  n X n, 
+#if not square matrix, i.e., m X n, then it must be m <= n, i.e., row size <= column size
+
+ 
+
