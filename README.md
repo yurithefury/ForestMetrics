@@ -1,6 +1,6 @@
 Description
 ===========
-Individual tree segmentation in LiDAR-derived point clouds implemented using [The Point Cloud Library (PCL)](http://pointclouds.org/) and described in:
+Individual tree segmentation of LiDAR-derived point clouds implemented using [The Point Cloud Library (PCL)](http://pointclouds.org/) and described in:
 [Shendryk, I., M. Broich, M. G. Tulbure and S. V. Alexandrov (2016). "Bottom-up delineation of individual trees from full-waveform airborne laser scans in a structurally complex eucalypt forest." Remote Sensing of Environment 173: 69-83.](https://www.sciencedirect.com/science/article/pii/S0034425715301966)
 
 and applied in:
@@ -15,7 +15,6 @@ This work exists thanks to:
 1) [Mirela Tulbure](https://scholar.google.com/citations?user=NHDv_PoAAAAJ&hl=en) 
 2) [Mark Broich](https://scholar.google.com/citations?user=D2t2HsQAAAAJ&hl=en)
 3) [Sergey Alexandrov](https://scholar.google.com/citations?user=uIZq6XsAAAAJ&hl=en)
-
 
 Installation
 ============
@@ -68,12 +67,11 @@ Usage
 
 Navigate to the 'data/' folder and run
 
-    ../bin/gui_delineation subset1.pcd
+    cd ForestMetrics/data/
+    ../bin/gui_delineation subset8.pcd
 
-The program will load given file and proceed by building a graph of the input
-point cloud. It will then display the graph (as a voxelized point cloud) so
-that the user may select seed points. After the points are selected it will
-perform random walker segmentation and visualize the results.
+The program will load given file and present a pipeline for individual tree segmentation. 
+To zoom in press `r`. 
 
 Visualizer interface
 --------------------
@@ -85,40 +83,83 @@ of the objects. For the random walker segmentation app it may look as follows:
 
                        Visualization objects
     ─────┬╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┬──────
-      ☐  │ Input point cloud                              │ i
-      ☐  │ Graph vertices                                 │ v
-      ☐  │ Vertex curvature                               │ C
-      ☐  │ Vertex normals                                 │ n
-      ☐  │ Adjacency edges                                │ a
-      ☐  │ Random walker seeds                            │ S
-      ☒  │ Object clusters                                │ c
+      ☐  │ Display vertices                       │ V
+      ☐  │ Display edges                          │ E
+      ☐  │ Dispaly seeds                          │ S
+      ☐  │ Dispaly points                         │ P
+      ☒  │ Display trees                          │ T
     ─────┴╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┴──────
 
 For example, press `a` to toggle graph adjacency edges display.
 
-Seed selection
+Pipeline:
+---------
+The pipeline consists of four steps: 
+1) Preprocessing 
+2) Trunk (or tree top) detection 
+3) Graph building 
+4) Segmentation using a random walker algorithm
+
+Preprocessing
 --------------
 
+In this step use a [pass through filter](http://pointclouds.org/documentation/tutorials/passthrough.php) to define points for further processing based on `X` and `Y` bounds.
+Basically, if your area of interest is too big you can cut out a snippet for evaluation.
+
+
+Trunk (or tree top) detection
+------------------------------
+
+In this step you can either define your seeds for random walker segmentation as trunks 
+(for bottom-up segmentation) or tree tops (for top-down segmentation). I suggest using
+ bottom-up segmentation only if the density of your LiDAR point clouds is >20 points/m^2.
+ 
 Seed selection works as follows:
-
-1. Hold shift and click a point. A randomly colored square will appear to confirm
-   the selection. Select more points it you wish, they will all share the same
-   label.
-2. Press escape to start selecting points for the next label.
-3. Repeat steps 1-2 until you selected point(s) for each object you want to
-   segment in the scene.
-4. Press espace once again.
-
-Command-line options
---------------------
-
-There are a number of command-line options, you may check it if you run the
-program without passing any parameters. For example, you may try to change the
-voxel resolution with `-v` option:
-
-    ../bin/app_random_walker_segmentation forest.pcd -v 0.01
-
-Another useful option is `--save`, which enables saving produced segmentation
-into 'segmentation.pcd' file in the working directory. 
-
+1. Bottom-up:
     
+    1.1. Use another [pass through filter](http://pointclouds.org/documentation/tutorials/passthrough.php)
+     to define points for tree trunk detection between `Zmin` and `Zmax` height.
+    
+    2.2. Use [conditional euclidean clustering](http://pointclouds.org/documentation/tutorials/conditional_euclidean_clustering.php)
+     to segment individual tree trunks (i.e. seeds). You will have to adjust `horizontal threshold`, 
+     `vertical threshold`, `cluster tolerance` and `minimum cluster size`.
+     
+    3.3. Use [3D line fitting](http://pointclouds.org/documentation/tutorials/random_sample_consensus.php)
+     to 'enrich' seeds along the tree trunk. You will have to adjust `angular threshold` 
+     and `distance threshold` parameters. When you are done with adjusting the parameters press `enrich` button
+     to add points to existing trunks.
+    
+2. Top-down:
+    
+    2.1. Use tree top detection using [local maxima](https://github.com/PointCloudLibrary/pcl/blob/master/filters/include/pcl/filters/local_maximum.h)
+     algorithm. You will have to adjust `radius` parameter.
+
+When you are done with adjusting the parameters press `use as seeds` button. Press press `r` and 
+
+Graph building
+---------------
+
+Here you can build your 3D graph for random walker segmentation. As part of this procedure you will
+have to define `Graph builder` and `Edge weights` parameters.
+
+1. Graph builder:
+    
+    1.1. Use `Voxel grid` to define the voxel resolution
+    
+    1.2. Use `KNN` to define k-nearest neighbors
+    
+    1.3. Use `Radius` to define the radius and maximum nearest neighbours
+    
+2. Edge weights:
+ 
+   Here you will have to adjust  `XYZ`, `Normal`, `Curvature`, `RGB` and `Verticality` parameters.
+   
+ When you are done with adjusting the parameters press `Update`. Press `E` button to display 
+ the edges of the graph.  
+
+
+Segmentation
+-------------
+   After the seeds are defined and the graph is built press `Segment` button perform 
+   random walker segmentation and visualize the results. Go to `File` &rarr; `Save segmentation` 
+   to write your segmentation results to a .pcd file. 
