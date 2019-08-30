@@ -83,11 +83,12 @@ of the objects. For the random walker segmentation app it may look as follows:
 
                        Visualization objects
     ─────┬╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┬──────
-      ☐  │ Display vertices                       │ V
-      ☐  │ Display edges                          │ E
-      ☐  │ Dispaly seeds                          │ S
-      ☐  │ Dispaly points                         │ P
-      ☒  │ Display trees                          │ T
+      ☐  │ Display vertices                          │ V
+      ☐  │ Display edges                             │ E
+      ☐  │ Dispaly seeds                             │ S
+      ☐  │ Dispaly points                            │ P
+      ☐  │ Dispaly lines                             │ L
+      ☒  │ Display trees                             │ T
     ─────┴╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┴──────
 
 For example, press `a` to toggle graph adjacency edges display.
@@ -106,6 +107,7 @@ Preprocessing
 In this step use a [pass through filter](http://pointclouds.org/documentation/tutorials/passthrough.php) to define points for further processing based on `X` and `Y` bounds.
 Basically, if your area of interest is too big you can cut out a snippet for evaluation.
 
+![Step_1](Step_1.PNG)
 
 Trunk (or tree top) detection
 ------------------------------
@@ -128,6 +130,7 @@ Seed selection works as follows:
      to 'enrich' seeds along the tree trunk. You will have to adjust `angular threshold` 
      and `distance threshold` parameters. When you are done with adjusting the parameters press `enrich` button
      to add points to existing trunks.
+     ![Step_2](Step_2.PNG)
     
 2. Top-down:
     
@@ -155,11 +158,13 @@ have to define `Graph builder` and `Edge weights` parameters.
    Here you will have to adjust  `XYZ`, `Normal`, `Curvature`, `RGB` and `Verticality` parameters.
    
  When you are done with adjusting the parameters press `Update`. Press `E` button to display 
- the edges of the graph.  
+ the edges of the graph.
+ ![Step_3](Step_3.PNG)
 
 
 Segmentation
 -------------
-   After the seeds are defined and the graph is built press `Segment` button perform 
-   random walker segmentation and visualize the results. Go to `File` &rarr; `Save segmentation` 
-   to write your segmentation results to a .pcd file. 
+After the seeds are defined and the graph is built press `Segment` button to perform 
+random walker segmentation and visualize the results. Go to `File` &rarr; `Save segmentation` 
+to write your segmentation results to a .pcd file. 
+![Step_4](Step_4.PNG)

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="595f3e6c-bb41-44ef-b6a1-f79738817245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/she397.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Step_1.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Step_2.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Step_3.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Step_4.PNG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -18,8 +21,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="391">
-                <caret line="156" column="70" selection-start-line="156" selection-start-column="70" selection-end-line="156" selection-end-column="70" />
+              <first_editor relative-caret-position="330">
+                <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               </first_editor>
               <second_editor />
             </state>
@@ -56,22 +59,6 @@
               <item name="ForestMetrics" type="b2602c69:ProjectViewProjectNode" />
               <item name="ForestMetrics" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ForestMetrics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ForestMetrics" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ForestMetrics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ForestMetrics" type="462c0819:PsiDirectoryNode" />
-              <item name="third-party" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ForestMetrics" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ForestMetrics" type="462c0819:PsiDirectoryNode" />
-              <item name="third-party" type="462c0819:PsiDirectoryNode" />
-              <item name="tviewer" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -81,7 +68,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gbr" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\she397\ForestMetrics" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -120,12 +112,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566968547446</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix documentation">
+      <created>1567062364767</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567062364767</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2066" height="1125" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13030602" />
@@ -147,9 +145,9 @@
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix documentation" />
     <MESSAGE value="Add examples in .pcd format" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add examples in .pcd format" />
+    <MESSAGE value="Fix documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix documentation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/viewpoint.cam">
@@ -162,11 +160,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Step_1.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Step_2.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Step_3.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Step_4.PNG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="391">
-            <caret line="156" column="70" selection-start-line="156" selection-start-column="70" selection-end-line="156" selection-end-column="70" />
+          <first_editor relative-caret-position="330">
+            <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
           </first_editor>
           <second_editor />
         </state>
