@@ -1,7 +1,8 @@
 Description
 ===========
-Individual tree segmentation of LiDAR-derived point clouds implemented using [The Point Cloud Library (PCL)](http://pointclouds.org/) and described in:
-[Shendryk, I., M. Broich, M. G. Tulbure and S. V. Alexandrov (2016). "Bottom-up delineation of individual trees from full-waveform airborne laser scans in a structurally complex eucalypt forest." Remote Sensing of Environment 173: 69-83.](https://www.sciencedirect.com/science/article/pii/S0034425715301966)
+Individual tree segmentation of LiDAR-derived point clouds using "random walker" algorithm. 
+The algorithm is implemented using [The Point Cloud Library (PCL)](http://pointclouds.org/)
+described in [Shendryk, I., M. Broich, M. G. Tulbure and S. V. Alexandrov (2016). "Bottom-up delineation of individual trees from full-waveform airborne laser scans in a structurally complex eucalypt forest." Remote Sensing of Environment 173: 69-83.](https://www.sciencedirect.com/science/article/pii/S0034425715301966)
 
 and applied in:
 
@@ -95,27 +96,27 @@ For example, press `a` to toggle graph adjacency edges display.
 
 Pipeline:
 ---------
-The pipeline consists of four steps: 
+The pipeline consists of 4 steps: 
 1) Preprocessing 
-2) Trunk (or tree top) detection 
+2) Trunk (or tree top) detection
 3) Graph building 
-4) Segmentation using a random walker algorithm
+4) Segmentation using "random walker" algorithm
 
 Preprocessing
 --------------
 
-In this step use a [pass through filter](http://pointclouds.org/documentation/tutorials/passthrough.php) to define points for further processing based on `X` and `Y` bounds.
-Basically, if your area of interest is too big you can cut out a snippet for evaluation.
+In this step apply a [pass through filter](http://pointclouds.org/documentation/tutorials/passthrough.php) to define points for further processing based on `X` and `Y` bounds.
+Basically, if your area of interest is too big you can cut out a small snippet for further evaluation.
 
 ![Step_1](Step_1.PNG)
 
 Trunk (or tree top) detection
 ------------------------------
 
-In this step you can either define your seeds for random walker segmentation as trunks 
+In this step you can either define your "seeds" for random walker segmentation representing tree trunks 
 (for bottom-up segmentation) or tree tops (for top-down segmentation). I suggest using
- bottom-up segmentation only if the density of your LiDAR point clouds is >20 points/m^2.
- 
+ bottom-up segmentation if the density of your LiDAR point clouds is >20 points/m<sup>2</sup>. 
+
 Seed selection works as follows:
 1. Bottom-up:
     
@@ -124,7 +125,7 @@ Seed selection works as follows:
     
     2.2. Use [conditional euclidean clustering](http://pointclouds.org/documentation/tutorials/conditional_euclidean_clustering.php)
      to segment individual tree trunks (i.e. seeds). You will have to adjust `horizontal threshold`, 
-     `vertical threshold`, `cluster tolerance` and `minimum cluster size`.
+     `vertical threshold`, `cluster tolerance` and `minimum cluster size` parameters.
      
     3.3. Use [3D line fitting](http://pointclouds.org/documentation/tutorials/random_sample_consensus.php)
      to 'enrich' seeds along the tree trunk. You will have to adjust `angular threshold` 
@@ -137,7 +138,7 @@ Seed selection works as follows:
     2.1. Use tree top detection using [local maxima](https://github.com/PointCloudLibrary/pcl/blob/master/filters/include/pcl/filters/local_maximum.h)
      algorithm. You will have to adjust `radius` parameter.
 
-When you are done with adjusting the parameters press `use as seeds` button. Press press `r` and 
+When you are done with adjusting the parameters press `use as seeds` button. 
 
 Graph building
 ---------------
@@ -155,9 +156,10 @@ have to define `Graph builder` and `Edge weights` parameters.
     
 2. Edge weights:
  
-   Here you will have to adjust  `XYZ`, `Normal`, `Curvature`, `RGB` and `Verticality` parameters.
+   Here you will have to adjust `XYZ`, `Normal`, `Curvature`, `RGB` and `Verticality` parameters, 
+   all of which are used for calculating the weights for graph edges.
    
- When you are done with adjusting the parameters press `Update`. Press `E` button to display 
+ When you are done with adjusting the parameters press `Update`. You can also press `E` button to display 
  the edges of the graph.
  ![Step_3](Step_3.PNG)
 
@@ -168,3 +170,7 @@ After the seeds are defined and the graph is built press `Segment` button to per
 random walker segmentation and visualize the results. Go to `File` &rarr; `Save segmentation` 
 to write your segmentation results to a .pcd file. 
 ![Step_4](Step_4.PNG)
+
+Final notes
+------------
+I'd love to see this pipeline implemented as a plugin for [CloudCompare](https://github.com/CloudCompare/CloudCompare).

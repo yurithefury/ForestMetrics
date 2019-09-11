@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="595f3e6c-bb41-44ef-b6a1-f79738817245" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Step_1.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Step_2.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Step_3.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Step_4.PNG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -21,8 +17,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="330">
-                <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <first_editor relative-caret-position="787">
+                <caret line="175" column="118" selection-start-line="175" selection-start-column="118" selection-end-line="175" selection-end-column="118" />
               </first_editor>
               <second_editor />
             </state>
@@ -43,7 +39,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="300" />
-    <option name="y" value="86" />
+    <option name="y" value="85" />
     <option name="width" value="1395" />
     <option name="height" value="915" />
   </component>
@@ -68,7 +64,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ChipClassification" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -119,11 +115,19 @@
       <option name="project" value="LOCAL" />
       <updated>1567062364767</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add graphical examples">
+      <created>1567131741893</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567131741893</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="2066" height="1125" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13030602" />
@@ -147,7 +151,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add examples in .pcd format" />
     <MESSAGE value="Fix documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix documentation" />
+    <MESSAGE value="Add graphical examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add graphical examples" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/viewpoint.cam">
@@ -172,11 +177,14 @@
     <entry file="file://$PROJECT_DIR$/Step_4.PNG">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="330">
-            <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <first_editor relative-caret-position="787">
+            <caret line="175" column="118" selection-start-line="175" selection-start-column="118" selection-end-line="175" selection-end-column="118" />
           </first_editor>
           <second_editor />
         </state>
